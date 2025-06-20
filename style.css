@@ -1,0 +1,198 @@
+@font-face {
+    font-family: Outfit;
+    src: url(fonts/Outfit-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    font-family: Outfit, Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #121212;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    position: relative;
+    background: #232323;
+    margin-top: 30px;
+    padding: 0.5rem 4rem;
+    border-radius: 3rem;
+
+    /* border: 3px solid #555; */
+}
+
+header::after{
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    bottom: -3px;
+    right: -3px;
+
+    z-index: -1;
+    border-radius: 3rem;
+    background: linear-gradient(to bottom right, #007402 , #dbff25);
+    overflow: hidden;
+
+}
+
+header:hover{
+    box-shadow: 0 0 30px 5px #dbff2544;
+}
+
+#inputDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: auto;
+}
+
+#cityInput{
+    font: inherit;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    height: 50px;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+    border-radius: 25px;
+}
+
+#searchBtn{
+    font: inherit;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007402;
+    width: 50px;
+    height: 50px;
+    padding: 0.5rem;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: transform 0.35s, background-color 0.35s;
+}
+
+#searchBtn:hover{
+    transform: translateY(-5px);
+    background-color: #a0a009;
+    fill: #222
+}
+
+#searchIcon{
+    fill: #fff;
+    transition: fill 0.35s;
+}
+#searchIcon:hover{
+    fill: #222
+}
+
+
+#cityCard{
+    display: flex;
+    flex-flow: row wrap ;
+    gap: 0px;
+    justify-content: center;
+    align-items: stretch;
+
+    position: relative;
+    /* min-width: 600px; */
+    background: linear-gradient(to bottom right, #007402 , #a0a009);
+    padding: 50px;
+    border-radius: 20px;
+    
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+#cityCard:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px 5px #dbff2544;
+}
+
+#cityName{
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+#cityTemp{
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 400;
+    /* letter-spacing: 0.3rem; */
+}
+
+#cityEmoji{
+    font-size: 5rem;
+}
+
+#cardLeft{
+    display: flex;
+    flex: 1;
+    min-width: 300px;
+    /* width: max-content; */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+}
+
+#cardRight{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* padding-top: 1.5rem; */
+    
+}
+
+@media (max-width: 768px) {
+    body{
+        font-size: 1.2rem;
+    }
+    header{
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        position: relative;
+        background: #232323;
+        margin-top: 30px;
+        padding: 0.5rem 2rem;
+        border-radius: 2.5rem;
+    }
+
+    #cityInput{
+        width: 60vw;
+    }
+    #cityCard{
+        min-width: none;
+        flex-flow: column wrap ;
+        padding: 30px;
+        gap: 50px;
+    }
+
+    #cardLeft{
+        min-width: 75vw;
+    }
+
+    #cardRight{
+        align-items: flex-start;
+    }
+    
+}

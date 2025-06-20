@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherMan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        WeatherMan 
+        <svg xmlns="http://www.w3.org/2000/svg" height="56px" viewBox="0 -960 960 960" width="56px" fill="#00cc00">
+            <path d="M480-285q61.46 0 105.23-41T633-428H326q5 61 48.77 102T480-285ZM285-603h142q0-29-20.8-50-20.79-21-50-21-29.2 0-50.2 20.86-21 20.85-21 50.14Zm247 0h143q0-29-20.86-50-20.85-21-50.14-21-29.7 0-50.85 20.86Q532-632.29 532-603ZM480-80q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-439v-441h720v441q0 74-28.5 139.5t-77 114q-48.5 48.5-114 77T480-80Zm0-60q125 0 212.5-87T780-439v-381H180v381q0 125 87.5 212T480-140Zm0-340Z"/>
+        </svg>
+    </header>
+
+    <div id="inputDiv">
+        <input id="cityInput" type="text" placeholder="Enter City">
+        <button id="searchBtn">
+            <svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#ffffff">
+                <path d="M795-93 526-361q-29 22.92-68.46 35.96Q418.08-312 372-312q-115.16 0-195.08-80Q97-472 97-585t80-193q80-80 193.5-80t193 80Q643-698 643-584.85q0 44.85-12.5 83.35Q618-463 593-429l270 268-68 68ZM371.35-406q74.9 0 126.28-52.25Q549-510.5 549-585t-51.52-126.75Q445.96-764 371.35-764q-75.43 0-127.89 52.25Q191-659.5 191-585t52.31 126.75Q295.62-406 371.35-406Z"/>
+            </svg>
+        </button>
+    </div>
+
+    <div id="cityCard">
+        <div id="cardLeft">
+            <p id="cityName">Dholakpur</p>
+            <p id="cityCoord">(<span id="cityLat">123°N</span>,<span id="cityLong">123°E</span>)</p>
+            <p id="cityTemp">69°C</p>
+            <p id="cityEmoji">🌤️</p>
+        </div>
+        <div id="cardRight">
+            <p id="cityWind">Wind Speed: 42 km/h</p>
+            <p id="cityHumid">Humidity: 205%</p>
+            <p id="citySky">Beer Skies</p>
+
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
